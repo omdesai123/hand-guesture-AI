@@ -1,0 +1,107 @@
+/* Fullscreen Container */
+.auth-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* AI Parallax Background */
+.bg {
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    top: -5%;
+    left: -5%;
+    background: url("https://wallpapercave.com/wp/wp11723807.png") no-repeat center/cover;
+    transition: transform 0.1s linear;
+    filter: brightness(1.1);
+    z-index: -2;
+}
+
+/* AI Noise Overlay */
+.noise {
+    position: absolute;
+    inset: 0;
+    background: url("https://i.imgur.com/8kV7F7w.gif");
+    mix-blend-mode: overlay;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Glassy Neon Auth Box */
+.auth-box {
+    width: 380px;
+    padding: 35px;
+    margin: auto;
+    margin-top: 12vh;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 22px cyan;
+    position: relative;
+    z-index: 10;
+}
+
+.auth-box h2 {
+    color: cyan;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.auth-box input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 0 12px rgba(0,255,255,0.4);
+}
+
+/* Neon Button */
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: cyan;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 0 20px cyan;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #00bdbd;
+    box-shadow: 0 0 32px cyan;
+}
+
+/* Error message */
+.error-msg {
+    background: rgba(255,0,0,0.4);
+    padding: 6px;
+    border-radius: 6px;
+    color: #ff3f3f;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Switch text */
+.switch-text {
+    margin-top: 18px;
+    text-align: center;
+    color: #ddd;
+}
+
+.switch-text a {
+    color: cyan;
+    text-decoration: none;
+}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="auth-container">
+    <div class="bg" id="bg"></div>
+    <div class="noise"></div>
+
+    <div class="auth-box">
+        <h2>Login</h2>
+
+        {% if error %}
+            <p class="error-msg">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit" class="auth-btn">Login</button>
+        </form>
+
+        <p class="switch-text">
+            Don't have an account?
+            <a href="/signup">Create one</a>
+        </p>
+    </div>
+</div>
+
+<script>
+document.addEventListener("mousemove", (e) => {
+    const bg = document.getElementById("bg");
+    const x = (window.innerWidth / 2 - e.clientX) / 40;
+    const y = (window.innerHeight / 2 - e.clientY) / 40;
+    bg.style.transform = `scale(1.1) rotateX(${y}deg) rotateY(${-x}deg)`;
+});
+</script>
+
+{% endblock %}
+z
